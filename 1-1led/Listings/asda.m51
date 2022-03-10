@@ -1,0 +1,89 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/28/2021  13:49:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+E:\C51\C51\BIN\BL51.EXE .\Objects\mian.obj TO .\Objects\asda PRINT (.\Listings\asda.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\mian.obj (MIAN)
+
+
+LINK MAP OF MODULE:  .\Objects\asda (MIAN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0016H     UNIT         ?PR?MIAN?MIAN
+            CODE    0016H     0014H     UNIT         ?PR?_DELAY1MS?MIAN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\asda (MIAN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\asda (MIAN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MIAN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0016H         PUBLIC        _Delay1ms
+  C:0000H         PUBLIC        mian
+  -------         PROC          _DELAY1MS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0016H         LINE#         2
+  C:0016H         LINE#         3
+  C:0016H         LINE#         5
+  C:001AH         LINE#         6
+  C:001AH         LINE#         7
+  C:001CH         LINE#         8
+  C:001EH         LINE#         10
+  C:001EH         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/28/2021  13:49:18  PAGE 2
+
+
+  C:0020H         LINE#         12
+  C:0022H         LINE#         13
+  C:0027H         LINE#         14
+  C:0029H         LINE#         16
+  -------         ENDPROC       _DELAY1MS
+  -------         PROC          MIAN
+  C:0000H         LINE#         19
+  C:0000H         LINE#         20
+  C:0000H         LINE#         21
+  C:0000H         LINE#         22
+  C:0000H         LINE#         23
+  C:0003H         LINE#         24
+  C:000AH         LINE#         25
+  C:000DH         LINE#         26
+  C:0014H         LINE#         27
+  -------         ENDPROC       MIAN
+  -------         ENDMOD        MIAN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?MIAN?MIAN
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+Program Size: data=8.0 xdata=0 code=42
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
